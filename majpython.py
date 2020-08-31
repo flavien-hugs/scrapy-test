@@ -53,12 +53,12 @@ def random_values(path, key):
 
 # random quotes
 def random_quote():
-    return random_values('quotes.json', 'quote')
+    return random_values('data/quotes.json', 'quote')
 
 
 # random charateres from Wikipedia
 def random_character():
-    return random_values('characters.json', 'character')
+    return random_values('data/characters.json', 'character')
 
 
 # Interaction : print a random sentence

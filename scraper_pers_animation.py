@@ -1,8 +1,13 @@
+'''
+    Extraction des personnages d'animation
+    via Wikipe
+'''
+
 import scrapy
 
 
 class CharactersSpider(scrapy.Spider):
-    name = "characterspider"
+    name = "character"
     start_urls = [
         'https://fr.wikipedia.org/wiki/Cat%C3%A9gorie:Personnage_d%27animation',
     ]
@@ -12,6 +17,3 @@ class CharactersSpider(scrapy.Spider):
             yield {
                 'character': link.css('a::text').extract_first(),
             }
-
-# run a script with :
-# scrapy runspider characters.py -o characters.json
